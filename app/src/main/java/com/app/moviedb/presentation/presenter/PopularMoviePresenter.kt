@@ -39,7 +39,7 @@ constructor(private val movieDataRepository: MovieDataRepository): BasePresenter
         movieDataRepository.getMovies(currentPage).subscribe({
             view()?.renderObject(it)
         }, {
-            view()?.showError(it?.message ?: "error")
+//            view()?.showError(it?.message ?: "error")
             isLoading = false
         }, {
             isLoading = false

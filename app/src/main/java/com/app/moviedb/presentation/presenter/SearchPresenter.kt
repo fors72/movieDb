@@ -41,7 +41,7 @@ constructor(private val movieDataRepository: MovieDataRepository): BasePresenter
         movieDataRepository.searchMovies(currentPage,query!!).subscribe({
             view()?.addObjects(it)
         }, {
-            view()?.showError(it?.message ?: "error")
+//            view()?.showError(it?.message ?: "error")
             isLoading = false
         }, {
             isLoading = false
